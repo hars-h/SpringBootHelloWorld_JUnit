@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Poll SCM') {
       steps {
-        git(url: 'https://github.com/hars-h/SpringBootHelloWorld_JUnit.git', branch: 'master', poll: true)
+        junit(allowEmptyResults: true, testResults: 'Test')
       }
     }
 
