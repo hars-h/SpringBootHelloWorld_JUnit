@@ -3,13 +3,13 @@ pipeline {
   stages {
     stage('Initialize') {
       steps {
-        sh 'mvn clean'
+        powershell 'mvn clean'
       }
     }
 
     stage('Build') {
       steps {
-        sh '\'mvn -Dmaven.test.failure.ignore=true install'
+        powershell 'mvn -Dmaven.test.failure.ignore=true install'
       }
     }
 
