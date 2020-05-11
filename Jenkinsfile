@@ -1,9 +1,23 @@
 pipeline {
   agent any
   stages {
-    stage('Poll SCM') {
+    stage('Initialize') {
       steps {
-        git(url: 'https://github.com/hars-h/SpringBootHelloWorld_JUnit.git', branch: 'master', poll: true)
+        sh '''echo PATH = ${PATH}
+echo M2_HOME = ${M2_HOME}
+mvn clean'''
+      }
+    }
+
+    stage('Build') {
+      steps {
+        sh '\'mvn -Dmaven.test.failure.ignore=true install'
+      }
+    }
+
+    stage('Report') {
+      steps {
+        junit '\'target/surefire-reports/**/*.xml'
       }
     }
 
