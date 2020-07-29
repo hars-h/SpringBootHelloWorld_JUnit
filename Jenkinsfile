@@ -6,5 +6,14 @@ pipeline {
                 sh 'mvn --version'
             }
         }
+        stage('run') {
+            steps {
+                sh """
+                chmod 777 -R *
+                pwd
+                x=10
+                echo $x
+             }
+        }
     }
 }
