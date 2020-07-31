@@ -15,7 +15,7 @@ pipeline {
        x=1
        y=99
        z=x+y
-       echo /$z
+       echo $z
        """
 
 
