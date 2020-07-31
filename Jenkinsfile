@@ -11,10 +11,10 @@ pipeline {
   steps {
      sh 'echo $pwd'
      sh 'x=99'
-     sh 'echo /$x'
+     sh 'echo $x'
      sh 'y=1'
-     sh 'echo /$y'     
-     sh 'echo /$x+/$y'
+     sh 'echo $y'     
+     sh 'echo $x+$y'
        }
      }    
    }
