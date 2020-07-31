@@ -1,6 +1,6 @@
 #!groovy
 pipeline {
-   agent any
+   agent { docker 'alpine' }
    stages {     
     stage('Stage 1') {       
   steps {
@@ -16,11 +16,7 @@ pipeline {
        y=99
        z=x+y
        echo $z
-       """
-
-
-
-    
+       """   
      }    
    }
  }
