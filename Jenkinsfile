@@ -9,13 +9,20 @@ pipeline {
      }
   stage('Stage 2') {       
   steps {
-     sh 'echo $pwd'
-     sh 'x=99'
-     sh 'echo $x'
-     sh 'y=1'
-     sh 'echo $y'     
-     sh 'echo $x+$y'
-       }
+  def commit = sh (99)
+       def commit1 = sh (
+       echo 'Inside sh'
+       x=1
+       y=99
+       z=x+y
+        echo $z
+       )
+
+
+    echo "${commit} "
+
+    
      }    
    }
  }
+}
