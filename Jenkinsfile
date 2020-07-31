@@ -9,10 +9,12 @@ pipeline {
      }
   stage('Stage 2') {       
   steps {
-     def varG = "This is gr var"
-     sh 'echo ${varG}'
-     sh 'x=200'
+     sh 'echo $pwd'
+     sh 'x=99'
      sh 'echo $x'
+     sh 'y=1'
+     sh 'echo $y'     
+     sh 'echo $x+$y'
        }
      }    
    }
