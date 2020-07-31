@@ -9,7 +9,7 @@ pipeline {
      }
   stage('Stage 2') {       
   steps {
-     @varG = "This is gr var"
+     def varG = "This is gr var"
      sh 'echo ${varG}'
      sh 'x=200'
      sh 'echo $x'
