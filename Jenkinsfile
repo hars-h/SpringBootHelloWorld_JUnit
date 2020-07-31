@@ -9,8 +9,8 @@ pipeline {
      }
   stage('Stage 2') {       
   steps {
-  def commit = sh (99)
-       def commit1 = sh (
+     
+       sh (
        echo 'Inside sh'
        x=1
        y=99
@@ -19,7 +19,6 @@ pipeline {
        )
 
 
-    echo "${commit} "
 
     
      }    
