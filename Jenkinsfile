@@ -13,6 +13,7 @@ pipeline {
                 pwd
                 x=10
                 echo $x
+                """
              }
         }
     }
