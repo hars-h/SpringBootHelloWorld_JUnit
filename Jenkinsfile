@@ -10,13 +10,13 @@ pipeline {
   stage('Stage 2') {       
   steps {
      
-       sh (
+       sh """
        echo 'Inside sh'
        x=1
        y=99
        z=x+y
-        echo $z
-       )
+       echo /$z
+       """
 
 
 
